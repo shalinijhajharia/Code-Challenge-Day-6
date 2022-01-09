@@ -9,6 +9,28 @@
 // Write the function to find the findDigit obtained.
 var findDigit = function(num, nth){
      //your code here
+     if(nth<0)
+     {
+       return -1;
+     }
+     if(num<0)
+     {
+       num=num*(-1);
+     }
+     let f=0;
+     let x=1;
+     let st=""+num;
+     for(let i=st.length-1;i>=0;i--)
+     {
+       if(x==nth)
+       {
+         return parseInt(st[i]);
+
+       }
+       x=x+1;
+      }
+      return 0;
   }
+
 
 //Use SpecRunner to check the Test Cases.
